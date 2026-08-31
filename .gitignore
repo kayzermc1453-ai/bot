@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+data/bot_data.json
+
+.codespaces/
+env

@@ -1,0 +1,48 @@
+2026-08-30 19:28:29.4958|INFO|Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase|Oryx command line: /usr/local/buildscriptgen/GenerateBuildScript.dll build --manifest-dir /workspaces/.oryx --property packagedir=/home/codespace/.local/lib/python3.12/site-packages --property python_version=3.12.1 --log-file /workspaces/.oryx/build.log /workspaces/codespaces-blank
+2026-08-30 19:28:30.4846|WARN|Microsoft.Oryx.BuildScriptGenerator.LocalSourceRepo|Could not get commit ID from repo. Exit code: 128, Output: 
+, Error: fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+2026-08-30 19:28:30.7459|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator|Available checkers: 5
+2026-08-30 19:28:30.7894|DEBUG|Microsoft.Oryx.Detector.Node.NodeDetector|Could not find package.json/package-lock.json/yarn.lock in repo
+2026-08-30 19:28:30.8181|DEBUG|Microsoft.Oryx.Detector.Node.NodeDetector|Could not find typical Node.js files in repo
+2026-08-30 19:28:30.8181|DEBUG|Microsoft.Oryx.Detector.Node.NodeDetector|App in repo is not a NodeJS app
+2026-08-30 19:28:31.5575|ERROR|Microsoft.Oryx.Detector.Python.PythonDetector|Cound not find 726571756972656d656e74732e747874 at the root of the repo. More information: https://aka.ms/requirements-not-found
+2026-08-30 19:28:31.5575|ERROR|Microsoft.Oryx.Detector.Python.PythonDetector|Missing setup.py at the root of the repo. More information: https://aka.ms/requirements-not-found
+2026-08-30 19:28:31.5575|ERROR|Microsoft.Oryx.Detector.Python.PythonDetector|Missing setup.py at the root of the repo. More information: https://aka.ms/requirements-not-found
+2026-08-30 19:28:31.5575|ERROR|Microsoft.Oryx.Detector.Python.PythonDetector|Missing uv.lock at the root of the repo. More information: https://aka.ms/requirements-not-found
+2026-08-30 19:28:31.5598|DEBUG|Microsoft.Oryx.Detector.Python.PythonDetector|Could not find file 'runtime.txt' in source repo
+2026-08-30 19:28:31.5615|INFO|Microsoft.Oryx.Detector.Python.PythonDetector|Could not find any file with extension '*.py' in the repo.
+2026-08-30 19:28:31.5641|DEBUG|Microsoft.Oryx.Detector.DotNetCore.ExplicitProjectFileProvider|No request to build a particular project file explicitly using the PROJECT environment variable
+2026-08-30 19:28:31.5658|DEBUG|Microsoft.Oryx.Detector.DotNetCore.ProbeAndFindProjectFileProvider|Could not find any files with extension 'csproj' in repo.
+2026-08-30 19:28:31.5658|DEBUG|Microsoft.Oryx.Detector.DotNetCore.ProbeAndFindProjectFileProvider|Could not find any files with extension 'fsproj' in repo.
+2026-08-30 19:28:31.5670|DEBUG|Microsoft.Oryx.Detector.Php.PhpDetector|File 'composer.json' does not exist in source repo
+2026-08-30 19:28:31.5670|INFO|Microsoft.Oryx.Detector.Php.PhpDetector|Could not find any file with extension '*.php' in the repo.
+2026-08-30 19:28:31.5685|DEBUG|Microsoft.Oryx.Detector.Ruby.RubyDetector|Could not find Gemfile in repo
+2026-08-30 19:28:31.5685|DEBUG|Microsoft.Oryx.Detector.Ruby.RubyDetector|Could not find typical Ruby files in repo
+2026-08-30 19:28:31.5685|DEBUG|Microsoft.Oryx.Detector.Ruby.RubyDetector|App in repo is not a Ruby app
+2026-08-30 19:28:31.5685|ERROR|Microsoft.Oryx.Detector.Golang.GolangDetector|Could not find go.mod in repo
+2026-08-30 19:28:31.5708|DEBUG|Microsoft.Oryx.Detector.Java.JavaDetector|Could not find any files with the following extensions in the repo: java, jsp
+2026-08-30 19:28:31.5757|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'nodejs'...
+2026-08-30 19:28:31.5771|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'nodejs' was not detected in the given repository.
+2026-08-30 19:28:31.5771|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'hugo'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'hugo' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'python'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'python' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'dotnet'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'dotnet' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'php'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'php' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'ruby'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'ruby' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'golang'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'golang' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Detecting platform using 'java'...
+2026-08-30 19:28:31.5775|ERROR|Microsoft.Oryx.BuildScriptGenerator.DefaultCompatiblePlatformDetector|Platform 'java' was not detected in the given repository.
+2026-08-30 19:28:31.5775|DEBUG|Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator|Running checkers
+2026-08-30 19:28:31.5805|INFO|Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator|Running 0 applicable checkers for 0 tools: 
+2026-08-30 19:28:31.5817|ERROR|Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator|Invalid usageMicrosoft.Oryx.BuildScriptGenerator.Exceptions.UnsupportedPlatformException: Could not detect the language from repo.
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String& script, List`1 checkerMessageSink) in /opt/tmp/oryx-repo/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 166
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String& generatedScript, Exception& exception) in /opt/tmp/oryx-repo/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+2026-08-30 19:28:31.5903|DEBUG|Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand|No checker messages emitted
