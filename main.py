@@ -584,10 +584,11 @@ async def yetki_ayarla(ctx):
 
 
 # --- BOTU BAŞLATMA ---
-keep_alive()
+if __name__ == '__main__':
+    keep_alive()
 
-TOKEN = os.environ.get('DISCORD_TOKEN')
-if not TOKEN:
-    raise RuntimeError('DISCORD_TOKEN ortam değişkeni tanımlı değil. Botu çalıştırmadan önce ortam değişkenini ayarla.')
+    TOKEN = os.environ.get('DISCORD_TOKEN')
+    if not TOKEN:
+        raise RuntimeError('DISCORD_TOKEN ortam değişkeni tanımlı değil. Botu çalıştırmadan önce ortam değişkenini ayarla.')
 
-bot.run(TOKEN)
+    bot.run(TOKEN)
