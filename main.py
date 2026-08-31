@@ -207,13 +207,7 @@ async def on_member_join(member):
 
     welcome_channel = find_channel(guild, data['server'].get('welcome_channel', 'genel-sohbet'))
     if welcome_channel:
-        embed = discord.Embed(
-            title='TBT sunucusuna hoş geldin!',
-            description=f'{member.mention}, Türkiye Builderlar Topluluğu ailesine katıldı. Kuralları okuyup rol seçimini yapmayı unutma.',
-            color=discord.Color.green()
-        )
-        embed.set_thumbnail(url=member.display_avatar.url)
-        await welcome_channel.send(embed=embed)
+        await welcome_channel.send(f'🎉 **{member.mention} sunucuya katıldı, hoş geldin!** 🎉')
 
 
 @bot.event
