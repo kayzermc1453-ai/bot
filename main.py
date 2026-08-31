@@ -184,18 +184,19 @@ async def on_member_join(member):
     guild = member.guild
     data = load_data()
     now = datetime.now(timezone.utc)
-    recent = [stamp for stamp in data['join_history'] if (now - datetime.fromisoformat(stamp)).total_seconds() < 180]
+    recent = [stamp for stamp in data['join_history'] if (now - datetime.fromisoformat(stamp)).total_seconds() < 60]
     recent.append(now.isoformat())
     data['join_history'] = recent[-30:]
     save_data(data)
 
-    if len(recent) >= 5:
+    anti_raid_triggered = False
+    if len(recent) >= 8:
+        anti_raid_triggered = True
         await log_action(guild, 'Anti-raid', f'{member.mention} şüpheli katılım nedeniyle kontrol altına alındı.', discord.Color.orange())
         try:
             await member.send('Sunucuya çok kısa sürede çok sayıda katılım tespit edildiği için geçici kontrol altında tutuluyorsunuz.')
         except discord.Forbidden:
             pass
-        return
 
     if member.created_at > datetime.now(timezone.utc) - timedelta(days=7):
         await log_action(guild, 'Hesap yaşı kontrolü', f'{member.mention} yeni açılmış hesap nedeniyle kontrol altında tutuluyor.', discord.Color.orange())
@@ -203,7 +204,6 @@ async def on_member_join(member):
             await member.send('Hesabınız çok yeni olduğu için yönetici kontrolünde. Yetkililere başvurabilirsiniz.')
         except discord.Forbidden:
             pass
-        return
 
     welcome_channel = find_channel(guild, data['server'].get('welcome_channel', 'genel-sohbet'))
     if welcome_channel:
